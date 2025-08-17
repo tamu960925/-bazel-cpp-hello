@@ -1,39 +1,35 @@
-# Bazel C++ Hello, World!
+# Bazel C++ Hello, World
 
-シンプルな Bazel + C++ の "Hello, Bazel!" プロジェクトです。
+Minimal Bazel + C++ project that prints "Hello, Bazel!".
 
-## 前提
-- Bazel（または Bazelisk）
-- C++ コンパイラ（`clang` または `g++`）
+## Prerequisites
+- Bazel (or Bazelisk)
+- C++ toolchain (`clang` or `g++`)
 
-macOS で Bazel がない場合:
-
+On macOS, you can install Bazelisk:
 ```bash
-brew install bazelisk  # `bazel` コマンドとして利用可
+brew install bazelisk
 ```
 
-## ファイル構成
-- `WORKSPACE`: 空のワークスペース定義
-- `BUILD`: `hello_world` バイナリのビルドルール
-- `main.cc`: 標準出力に "Hello, Bazel!" を表示
-
-## ビルド
+## Build
 ```bash
 bazel build //:hello_world
 ```
 
-## 実行
+## Run
 ```bash
 bazel run //:hello_world
-# 期待される出力:
+# Expected output:
 # Hello, Bazel!
 ```
 
-## クリーン
+## Clean
 ```bash
 bazel clean
 ```
 
-## メモ
-- 依存関係はなく、空の `WORKSPACE` で動作します。
-- Bazelisk を使うと Bazel のバージョン管理が容易です。
+## Files
+- `WORKSPACE` — empty workspace definition
+- `BUILD` — `hello_world` binary rule
+- `main.cc` — prints the greeting
+
