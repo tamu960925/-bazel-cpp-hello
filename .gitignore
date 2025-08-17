@@ -1,0 +1,13 @@
+# Bazel output symlinks and directories
+bazel-*
+bazel-bin
+bazel-out
+bazel-testlogs
+
+# Local/user-specific Bazel files
+.bazelrc.user
+.bazelprofile
+.bazeliskrc
+
+# Bzlmod lockfile (not needed for this minimal example)
+MODULE.bazel.lock
